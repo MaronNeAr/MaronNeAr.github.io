@@ -1,0 +1,71 @@
+#top {
+    color: red;
+    font-size: 20px;
+}
+
+#txt {
+    text-indent: 10px;
+    line-height: 2px;
+}
+
+body {
+    font-size: 16px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.brown {
+    color: brown;
+}
+
+.backred {
+    background-color: red;
+}
+
+.backgreen {
+    background-color: green;
+}
+
+.divbox {
+    width: 1500px;
+    height: 20px;
+}
+
+.spanbox {
+    width: 100px;
+    height: 60px;
+}
+
+dl>dd {
+    font-family: 宋体;
+}
+
+dl>dt {
+    font-family: 方正姚体;
+}
+
+ul li {
+    color: red;
+}
