@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <title>很显然 这是一个网页</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        
+        #top {
+            color: red;
+            font-size: 20px;
+        }
+        
+        #txt {
+            text-indent: 10px;
+            line-height: 2px;
+        }
+        
+        body {
+            font-size: 16px;
+        }
+        
+        .italic {
+            font-style: italic;
+        }
+        
+        .bold {
+            font-weight: bold;
+        }
+        
+        .red {
+            color: red;
+        }
+        
+        .blue {
+            color: blue;
+        }
+        
+        .green {
+            color: green;
+        }
+        
+        .yellow {
+            color: yellow;
+        }
+        
+        .brown {
+            color: brown;
+        }
+        
+        .backred {
+            background-color: red;
+        }
+        
+        .backgreen {
+            background-color: green;
+        }
+        
+        .divbox {
+            width: 1500px;
+            height: 20px;
+        }
+        
+        .spanbox {
+            width: 100px;
+            height: 60px;
+        }
+        
+        dl>dd {
+            font-family: 宋体;
+        }
+        
+        dl>dt {
+            font-family: 方正姚体;
+        }
+        
+        ul li {
+            color: red;
+        }
+        /* dl dd,dt {
+            color:blue;
+        } */
+        
+        p>a:hover {
+            color: red;
+            text-decoration: none;
+        }
+        
+        input:focus {
+            background-color: pink;
+        }
+        
+        #win10 {
+            width: 1920px;
+            height: 1080px;
+            background-image: url(/static/images/windows10.jpeg/);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+
+    <script>
+        //prompt("请输入您的姓名：");
+        console.log("Hello!");
+
+        function myclick() {
+            alert("哇塞，你成功点击了它哎");
+        }
+
+        var bodyer = document.body;
+        var htmler = document.documentElement;
+        /* document.getElementById('');
+        document.getElementsByTagName(''); 
+        document.getElementsByClass();*/
+    </script>
+
+</head>
+
+<body align="center">
+    <p id="top">Hello world!!!</p>
+    <script>
+        var hw = document.getElementById('top');
+        console.log(hw);
+    </script>
+    <img src="/static/images/shanghai.jpg/" alt="图片无法加载" width="200" /><br />
+
+    <br />
+
+    <button onclick="myclick();">这是一个按钮，点我试试!</button>
+
+    <button id="btn">唐伯虎</button>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            alert("点秋香");
+        }
+    </script>
+
+    <button id="btntime">点击获取系统时间</button>
+    <div>它可能是一个时间</div>
+    <script>
+        var btntime = document.getElementById('btntime');
+        var div = document.querySelector('div');
+        btntime.onclick = function() {
+            div.innerText = getDate();
+        }
+
+        function getDate() {
+            var data = new Date();
+            var year = data.getFullYear();
+            var month = data.getMonth() + 1;
+            var datas = data.getDate();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day = data.getDay();
+            return '今天是:' + year + '年' + month + '月' + datas + '日 ' + arr[day];
+        }
+    </script>
+
+    <br />
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button><br />
+    <img id="star" src="/static/images/ldh.jpg" alt="图片无法加载" title="额系刘德华" width="200" height="133">
+
+    <script>
+        var ldh = document.getElementById('ldh');
+        var zxy = document.getElementById('zxy');
+        var img = document.getElementById('star');
+        ldh.onclick = function() {
+            img.src = "/static/images/ldh.jpg";
+            img.title = "额系刘德华";
+        }
+        zxy.onclick = function() {
+            img.src = "/static/images/zxy.jpg";
+            img.title = "俺是张学友";
+        }
+    </script>
+    <table align="center" border="1">
+        <tr>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>马龙</td>
+            <td>2020110624</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td colspan="2">合并列单元格</td>
+            <td>好耶!</td>
+        </tr>
+    </table>
+
+    <form align="center">
+        姓名:<input id="userName" type="text" name="username" value="请输入用户名" maxlength="6">
+        <script>
+            var uName = document.getElementById('userName');
+            uName.onclick = function() {
+                this.value = "";
+            }
+        </script>
+        <br /> 密码:
+        <input id="pwd" type="password" name="pwd">
+        <p id="viewPwd" class="blue">查看密码</p>
+        <script>
+            var pwd = document.getElementById('pwd');
+            var viewPwd = document.getElementById('viewPwd');
+            var flag = true;
+            viewPwd.onclick = function() {
+                if (flag) {
+                    pwd.type = "text";
+                    flag = false;
+                    this.innerHTML = "隐藏密码";
+                } else {
+                    pwd.type = "password";
+                    flag = true;
+                    this.innerHTML = "查看密码";
+                }
+            }
+        </script>性别:
+        <label for="sex1">男</label><input type="radio" name="sex" value="男" checked="checked" id="sex1">
+        <label for="sex2">女</label><input type="radio" name="sex" value="女" id="sex2"><br /> 籍贯:
+        <select>
+                    <option selected="selected">上海市</option><option>北京市</option><option>天津市</option><option>河北省</option><option>山西省</option><option>内蒙古自治区</option><option>辽宁省</option><option>吉林省</option><option>黑龙江省</option><option>江苏省</option><option>浙江省</option><option>安徽省</option><option>福建省</option><option>江西省</option><option>山东省</option><option>河南省</option><option>湖北省</option><option>湖南省</option><option>广东省</option><option>广西壮族自治区</option><option>海南省</option><option>重庆市</option><option>四川省</option><option>贵州省</option><option>云南省</option><option>西藏自治区</option><option>陕西省</option><option>甘肃省</option><option>青海省</option><option>宁夏回族自治区</option><option>新疆维吾尔自治区</option>
+                </select><br /> 爱好:
+        <label for="hobb1">吃饭</label><input type="checkbox" name="hobby" value="吃饭" checked="checked" id="hobby1">
+        <label for="hobby2">睡觉</label><input type="checkbox" name="hobby" value="睡觉" id="hobby2">
+        <label for="hobby3">玩手机</label><input type="checkbox" name="hobby" value="玩手机" id="hobby3"><br /> 照片:
+        <input type="file"><br /> 自我介绍:
+        <textarea rows="3" cols="20">请填写自我介绍</textarea><br /> 验证码:
+        <input type="text" name="verfitycode" value="请输入验证码"><input type="button" value="获取验证码"><br />
+        <input type="reset"> &nbsp <input type="submit" value="登录"><br />
+    </form>
+
+    <br /> ----------分割线----------
+    <br />
+    <span class="backred spanbox">红色</span>
+    <span class="backgreen spanbox">绿色</span>
+    <span class="backred spanbox">红色</span>
+    <div class="backred divbox">红色</div>
+    <div class="backgreen divbox">绿色</div>
+    <div class="backred divbox">红色</div>
+
+    <br />
+
+    <ul>
+        <li>晴天</li>
+        <li>安静</li>
+        <li>稻香</li>
+        <li class="bold">&lt七里香&gt</li>
+        <li>不能说的秘密</li>
+        <li>轨迹</li>
+        <li>彩虹</li>
+    </ul>
+    <br />
+
+    <dl align="center">
+        <dt style="color: blue; font-style:bold;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp七里香-周杰伦</dt>
+        <dd class="red italic">整夜 我的爱溢出就像雨水</dd>
+        <dd class="red italic">窗台蝴蝶</dd>
+        <dd class="red italic">像诗里纷飞的美丽章节</dd>
+        <dd class="red italic">我接着写</dd>
+        <dd class="red italic">把永远爱你写进诗的结尾</dd>
+        <dd class="red italic">你是我唯一想要的了解</dd>
+    </dl>
+
+    <br />
+
+    <p id="txt">我是嫩爹
+        <P>
+            <!-- <div id="win10"></div> -->
+            <p><a href="http://www.qq.com">查看更多信息，请点击</a></p>
+            <p><a href="#top">回到顶部</a></p>
+</body>
+
+</html>
