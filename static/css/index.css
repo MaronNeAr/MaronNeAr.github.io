@@ -1,0 +1,120 @@
+#topBlock {
+    width: 1519px;
+    height: 200px;
+    background-image: url(/static/images/BG1.jpeg/);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1519px;
+}
+
+#options {
+    width: 1519px;
+    height: 50px;
+}
+
+.topBox {
+    width: 200px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+.detils {
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.white {
+    color: white;
+    font-size: 20px;
+    font-family: '华文中宋';
+}
+
+.rightBox {
+    position: absolute;
+    width: 275px;
+    line-height: 160px;
+    display: inline-block;
+    background-color: pink;
+}
+
+.rightBlock {
+    width: 800px;
+    line-height: 170px;
+    display: inline-block;
+    background-color: red;
+}
+
+.arrow-l,
+.arrow-r {
+    position: absolute;
+}
+
+.current {
+    src: "/static/images/circle1.png";
+}
+
+.uncurrent {
+    src: "/static/images/circle0.png";
+}
+
+#mainBlock {
+    position: absolute;
+    top: 260px;
+    left: 50px;
+    display: inline-block;
+    width: 560px;
+    line-height: 350px;
+    background-color: pink;
+}
+
+#mainBlock ul li {
+    float: left;
+    list-style: none;
+}
+
+#mainBlock ul {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#circle {
+    position: absolute;
+    top: 200px;
+    left: 460px;
+}
+
+#circle li {
+    width: 20px;
+    height: 10px;
+    float: left;
+    list-style-type: none;
+}
+
+#score {
+    width: 500px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+}
+
+#searchDiv {
+    height: 30px;
+    background-color: skyblue;
+}
+
+#searchInput {
+    width: 560px;
+    height: 26px;
+    align-items: center;
+}
+
+#logOn {
+    width: 180px;
+    line-height: 50px;
+    display: inline-block;
+    text-align: center;
+}
