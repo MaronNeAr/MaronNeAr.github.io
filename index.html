@@ -29,7 +29,7 @@
 </head>
 
 <body style="background-image: url(/static/images/BG2.jpeg);">
-    <div id="topBlock" style="width:1536px;">
+    <div id="topBlock" style="background-image: url(/static/images/BG1.jpeg);">
         <div id="options">
             <span class="topBox white"><a href="\index" style="color: white;text-decoration: none;">首页</a></span>
             <span class="topBox white">北京2022</span>
@@ -40,8 +40,8 @@
         </div>
         <img src="\static\images\bjOlmpics.png" alt="图片加载失败" width="1536px">
     </div>
-    <div style="height: 5px;width:1536px; background-color: skyblue;"></div>
-    <div id="searchDiv" style="width:1536px;"> 
+    <div style="height: 5px; width: 1536px; background-color: skyblue;"></div>
+    <div id="searchDiv" style="width: 1536px;">
         <span class="detils" style="width: 210px;"><button id="btntime">点击获取系统时间</button></span>
         <span class="detils" style="width: 680px;">
             <div id="timeDisplay">它可能是一个时间</div>
@@ -65,20 +65,29 @@
         </script>
         <span class="search">
             <span id="spaceWhite1"></span>
-        <input id="searchInput" name="searchInput" type="text">
+        <input id="searchInput" name="searchInput" type="text" @keyup.enter="searchTo">
         <a id="logA" href="https://olympics.com/zh/search/?q=">
             <button type="" id="btnSearch">Search</button>
         </a>
         </span>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script>
             var logA = document.getElementById('logA');
             var btnS = document.getElementById('btnSearch');
             btnS.onclick = function() {
                 logA.href = "https://olympics.com/zh/search/?q=" + document.getElementById('searchInput').value;
             }
+            var app = new Vue({
+                el: "#searchDiv",
+                methods: {
+                    searchTo: function() {
+                        window.location.href = "https://olympics.com/zh/search/?q=" + document.getElementById('searchInput').value;
+                    },
+                },
+            });
         </script>
     </div>
-    <div style="height: 5px;width:1536px; background-color: skyblue;"></div>
+    <div style="height: 5px; width: 1536px; background-color: skyblue;"></div>
     <div style="height: 20px;"></div>
     <div style="height: 400px;">
         <span id="mainBlock">
@@ -104,7 +113,7 @@
         <span class="rightBox" style="left: 905px;top: 450px;">img</span>
         <span class="rightBox" style="left: 1190px;top: 450px;">img</span>
     </div>
-
+    <h1>2022北京冬季奥林匹克运动会</h1>
     <script src="/static/js/animate.js"></script>
     <script src="/static/js/index.js"></script>
 </body>
