@@ -42,7 +42,7 @@ window.addEventListener('load', function() {
                     circleImg[i].className = "";
                 }
             }
-            this.src = "/static/images/circle1.png";
+            this.src = "/static/images/circle/circle1.png";
             this.className = "current"
             for (var i = 0; i < circleImg.length; i++) {
                 if (circleImg[i].className == "current") index = i;
