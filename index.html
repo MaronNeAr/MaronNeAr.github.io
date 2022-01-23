@@ -19,7 +19,7 @@
 
 <body style="background-image: url(/static/images/background/BG2.jpeg);background-size: 100%;background-repeat: repeat-y;">
     <div id="topBlock" style="background-image: url(/static/images/background/BG1.jpeg);width: 100%;">
-        <div id="options">
+        <div id="options" style="width: 100%;">
             <span class="topBox white"><a href="\index">首页</a></span>
             <span class="topBox white"><a href="https://www.beijing2022.cn/" >北京2022</a></span>
             <span class="topBox white"><a href="https://olympics.com/zh/olympic-channel">奥林匹克频道</a></span>
@@ -29,11 +29,10 @@
         </div>
         <img src="\static\images\bjOlmpics.png" alt="图片加载失败" width="100%">
     </div>
-    <div style="height: 5px; width: 100%; background-color: skyblue;"></div>
     <div id="searchDiv" style="width: 100%;">
-        <span class="detils" style="width: 14%;"><button id="btntime">点击获取系统时间</button></span>
+        <span class="detils" style="width: 14%;height: 40px;"><button id="btntime">点击获取系统时间</button></span>
         <span class="detils" style="width: 46%;">
-            <div id="timeDisplay"><strong>它可能是一个时间</strong></div>
+            <div id="timeDisplay" style="line-height: 40px;"><strong>它可能是一个时间</strong></div>
         </span>
         <script>
             var btntime = document.getElementById('btntime');
@@ -52,12 +51,11 @@
                 return '<strong>今天是:' + year + '年' + month + '月' + datas + '日 ' + arr[day] + '</strog>';
             }
         </script>
-        <span class="search">
-            <span id="spaceWhite1"></span>
-        <input id="searchInput" name="searchInput" type="text" @keyup.enter="searchTo">
-        <a id="logA" href="https://olympics.com/zh/search/?q=">
-            <button type="" id="btnSearch">Search</button>
-        </a>
+        <span class="search" style="line-height: 40px;">
+            <input id="searchInput" name="searchInput" type="text" @keyup.enter="searchTo">
+            <a id="logA" href="https://olympics.com/zh/search/?q=">
+                <button type="" id="btnSearch">Search</button>
+            </a>
         </span>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script>
@@ -76,18 +74,17 @@
             });
         </script>
     </div>
-    <div style="height: 5px; width:100%; background-color: skyblue;"></div>
     <div style="height: 20px;"></div>
     <div style="height: 400px;">
         <div id="mainBlock">
-            <span class="arrow-l" style="left: 0px;"><img src="/static/images/arrow/arrow-wl.png" width="100%" height="40px" alt="<"></span>
-            <span class="arrow-r" style="left: 92.8%;"><img src="/static/images/arrow/arrow-wr.png" width="100%" height="40px" alt=">"></span>
-            <a id="imgHref" href="https://www.beijing2022.cn/"><img id="mainImg" src="/static/images/mainImg/mainImg0.jpeg" width="100%" height="350px" alt=""></a>
+            <span class="arrow-l" style="left: 0%;width: 100%;"><img src="/static/images/arrow/arrow-wl.png" width="7.1%" height="40px" alt=""></span>
+            <span class="arrow-r" style="left: 92.8%;width: 100%;"><img src="/static/images/arrow/arrow-wr.png" width="7.1%" height="40px" alt=""></span>
+            <a id="imgHref" href="https://www.beijing2022.cn/" style="width: 100%;"><img id="mainImg" src="/static/images/mainImg/mainImg0.jpeg" width="100%" height="350px" alt=""></a>
             <ol id="circle">
-                <li><img class="current" src="/static/images/circle/circle1.png" alt="" title="冬奥" width="10px" height="10px"></li>
-                <li><img src="/static/images/circle/circle0.png" width="10px" height="10px" alt="" title="北京"></li>
-                <li><img src="/static/images/circle/circle0.png" width="10px" height="10px" alt="" title="顾爱玲"></li>
-                <li><img src="/static/images/circle/circle0.png" width="10px" height="10px" alt="" title="冰壶"></li>
+                <li><img class="current" src="/static/images/circle/circle1.png" alt="" title="冬奥" width="50%" height="10px"></li>
+                <li><img src="/static/images/circle/circle0.png" width="50%" height="10px" alt="" title="北京"></li>
+                <li><img src="/static/images/circle/circle0.png" width="50%" height="10px" alt="" title="顾爱玲"></li>
+                <li><img src="/static/images/circle/circle0.png" width="50%" height="10px" alt="" title="冰壶"></li>
             </ol>
         </div>
         <div class="rightBox" style="left: 40.8%;top: 260px;">
@@ -124,10 +121,10 @@
     <h1>&nbsp&nbsp&nbsp&nbsp&nbsp2022北京冬季奥林匹克运动会</h1>
     <div id="contentBox">
         <div class="content" v-for="(item,index) in imgSrc">
-            <a v-bind:href="imgHref[index]">
+            <a v-bind:href="imgHref[index]" style="width: 100%;">
                 <img v-bind:src="item" alt="" style="position: relative;left: 10%;width: 80%;">
             </a>
-            <h2 align="center">{{ nameSrc[index] }}</h2>
+            <h2 align="center">{{nameSrc[index]}}</h2>
             <br />
         </div>
     </div>
@@ -153,6 +150,9 @@
             <source src="/static/video/PromoteVideo.mp4">
         </video>
     </div>
+    <!-- <video preload="auto" src="https://player.bilibili.com/808a24dd-3174-4a68-b2ef-2ad65005553a" controls></video>
+    <video controls preload="auto" autoplay="true" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" style="width: 640px; height: 375px;" src="blob:http://news.cnr.cn/a3a86339-81de-412d-979a-75c02a64a0cc"></video> -->
+    <!-- <iframe src="//player.bilibili.com/player.html?aid=976029658&amp;cid=423323543&amp;page=1" style="min-height:950px;width:100%" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
     <h2 align="center">《你好，双奥之城》</h2>
 
 
