@@ -12,45 +12,34 @@
             margin: 0;
             padding: 0%;
         }
-        /* body {
-            background-image: url(/static/images/BG2.jpeg);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }  */
-        /* #spaceWhite1 {
-            width: px;
-            line-height: 10px;
-            display: inline-block;
-        } */
     </style>
     <script>
     </script>
 </head>
 
-<body style="background-image: url(/static/images/BG2.jpeg);">
-    <div id="topBlock" style="background-image: url(/static/images/BG1.jpeg);">
+<body style="background-image: url(/static/images/background/BG2.jpeg);background-size: 100%;background-repeat: repeat-y;">
+    <div id="topBlock" style="background-image: url(/static/images/background/BG1.jpeg);width: 100%;">
         <div id="options">
-            <span class="topBox white"><a href="\index" style="color: white;text-decoration: none;">首页</a></span>
-            <span class="topBox white">北京2022</span>
-            <span class="topBox white"><a href="https://olympics.com/zh/olympic-channel" style="color: white;text-decoration: none;">奥林匹克频道</a></span>
-            <span class="topBox white">直播赛事</span>
+            <span class="topBox white"><a href="\index">首页</a></span>
+            <span class="topBox white"><a href="https://www.beijing2022.cn/" >北京2022</a></span>
+            <span class="topBox white"><a href="https://olympics.com/zh/olympic-channel">奥林匹克频道</a></span>
+            <span class="topBox white"><a href="https://2022.cctv.com/?spm=C73465.PhvcG4VlqNFF.EyAwthc54FQC.6">直播赛事</a></span>
             <span id="score" class="white">查看当前积分榜</span>
             <span id="logOn" class="white"><a href="\register" style="color: white;text-decoration: none;">登录/注册</a></span>
         </div>
         <img src="\static\images\bjOlmpics.png" alt="图片加载失败" width="1536px">
     </div>
-    <div style="height: 5px; width: 1536px; background-color: skyblue;"></div>
-    <div id="searchDiv" style="width: 1536px;">
-        <span class="detils" style="width: 210px;"><button id="btntime">点击获取系统时间</button></span>
-        <span class="detils" style="width: 680px;">
-            <div id="timeDisplay">它可能是一个时间</div>
+    <div style="height: 5px; width: 100%; background-color: skyblue;"></div>
+    <div id="searchDiv" style="width: 100%;">
+        <span class="detils" style="width: 14%;"><button id="btntime">点击获取系统时间</button></span>
+        <span class="detils" style="width: 46%;">
+            <div id="timeDisplay"><strong>它可能是一个时间</strong></div>
         </span>
         <script>
             var btntime = document.getElementById('btntime');
             var timer = document.getElementById('timeDisplay');
             btntime.onclick = function() {
-                timer.innerText = getDate();
+                timer.innerHTML = getDate();
             }
 
             function getDate() {
@@ -60,7 +49,7 @@
                 var datas = data.getDate();
                 var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
                 var day = data.getDay();
-                return '今天是:' + year + '年' + month + '月' + datas + '日 ' + arr[day];
+                return '<strong>今天是:' + year + '年' + month + '月' + datas + '日 ' + arr[day] + '</strog>';
             }
         </script>
         <span class="search">
@@ -87,35 +76,90 @@
             });
         </script>
     </div>
-    <div style="height: 5px; width: 1536px; background-color: skyblue;"></div>
+    <div style="height: 5px; width:100%; background-color: skyblue;"></div>
     <div style="height: 20px;"></div>
     <div style="height: 400px;">
-        <span id="mainBlock">
-            <!-- <img src="\static\images\mainImg.jpeg" alt="图片加载失败" width="560px" height="350px"> -->
-            <ul>
-                <li>
-                    <img id="mainImg" src="/static/images/mainImg0.jpeg" width="560px" height="350px" alt="">
-                </li>
-            </ul>
-            <span class="arrow-l"><img src="/static/images/arrow-wl.png" width="40px" height="40px" alt="<"></span>
-        <span class="arrow-r" style="left: 520px;"><img src="/static/images/arrow-wr.png" width="40px" height="40px" alt=">"></span>
-        <ol id="circle">
-            <li><img class="current" src="/static/images/circle1.png" alt="" title="冬奥" width="10px" height="10px"></li>
-            <li><img src="/static/images/circle0.png" width="10px" height="10px" alt="" title="北京"></li>
-            <li><img src="/static/images/circle0.png" width="10px" height="10px" alt="" title="顾爱玲"></li>
-            <li><img src="/static/images/circle0.png" width="10px" height="10px" alt="" title="冰壶"></li>
-        </ol>
-        </span>
-        <span class="rightBox" style="left: 620px;top: 260px;">img</span>
-        <span class="rightBox" style="left: 905px;top: 260px;">img</span>
-        <span class="rightBox" style="left: 1190px;top: 260px;">img</span>
-        <span class="rightBox" style="left: 620px;top: 450px;">img</span>
-        <span class="rightBox" style="left: 905px;top: 450px;">img</span>
-        <span class="rightBox" style="left: 1190px;top: 450px;">img</span>
+        <div id="mainBlock">
+            <span class="arrow-l" style="left: 0px;"><img src="/static/images/arrow/arrow-wl.png" width="100%" height="40px" alt="<"></span>
+            <span class="arrow-r" style="left: 92.8%;"><img src="/static/images/arrow/arrow-wr.png" width="100%" height="40px" alt=">"></span>
+            <a id="imgHref" href="https://www.beijing2022.cn/"><img id="mainImg" src="/static/images/mainImg/mainImg0.jpeg" width="100%" height="350px" alt=""></a>
+            <ol id="circle">
+                <li><img class="current" src="/static/images/circle/circle1.png" alt="" title="冬奥" width="10px" height="10px"></li>
+                <li><img src="/static/images/circle/circle0.png" width="10px" height="10px" alt="" title="北京"></li>
+                <li><img src="/static/images/circle/circle0.png" width="10px" height="10px" alt="" title="顾爱玲"></li>
+                <li><img src="/static/images/circle/circle0.png" width="10px" height="10px" alt="" title="冰壶"></li>
+            </ol>
+        </div>
+        <div class="rightBox" style="left: 40.8%;top: 260px;">
+            <a class="rightHref" href="https://tv.cctv.com/2022/01/22/VIDEEJjEufC6vtms02wOwmLc220122.shtml?spm=0.PG3ICyQX7bKe.EzTMywnN083k.1">
+                <img src="/static/images/rightbox/fireworker.jpg" alt="" width="100%" height="160px">
+            </a>
+            <strong class="rightStrong">[冰雪]将有约200名火炬手参与冬奥...</strong>
+        </div>
+        <div class="rightBox" style="left: 59.6%;top: 260px;">
+            <a class="rightHref" href="https://olympics.com/zh/beijing-2022/ceremonies">
+                <img src="/static/images/rightbox/ceremony.jpg" alt="" width="100%" height="160px">
+            </a>
+            <strong class="rightStrong">北京2022冬奥开幕式现场[LIVE]</strong>
+        </div>
+        <div class="rightBox" style="left: 78.4%;top: 260px;">
+            <a class="rightHref" href="https://olympics.com/zh/beijing-2022/venues"><img src="/static/images/rightbox/stadium.jpg" alt="" width="100%" height="160px"></a>
+            <strong class="rightStrong">北京2022冬奥会比赛场馆</strong>
+        </div>
+        <div class="rightBox" style="left: 40.8%;top: 450px;">
+            <a class="rightHref" href="https://sports.cctv.com/2022/01/20/VIDE8bcyGDYyK8MHN2zpZQBj220120.shtml?spm=0.PG3ICyQX7bKe.EwFYMVqVIDqY.2"><img src="/static/images/rightbox/FromBJ2BJ.png" alt="" width="100%" height="160px"></a>
+            <strong class="rightStrong">[冰雪]《从北京到北京》主题曲MV...</strong>
+        </div>
+        <div class="rightBox" style="left: 59.6%;top: 450px;">
+            <a class="rightHref" href="https://olympics.com/zh/news/beijing-2022-teams-of-china-tour-short-speed-skating"><img src="/static/images/rightbox/speed-skating.jpg" alt="" width="100%" height="160px"></a>
+            <strong class="rightStrong">中国代表团北京冬奥会巡礼--短道速滑</strong>
+        </div>
+        <div class="rightBox" style="left: 78.4%;top: 450px;">
+            <a class="rightHref" href="https://olympics.com/zh/video/an-international-ice-maker-s-journey-serving-beijing-2022"><img src="/static/images/rightbox/icer.jpg" alt="" width="100%" height="160px"></a>
+            <strong class="rightStrong">资深国际制冰师服务于北京冬奥会</strong>
+        </div>
     </div>
-    <h1>2022北京冬季奥林匹克运动会</h1>
+    <br />
+    <br />
+    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp2022北京冬季奥林匹克运动会</h1>
+    <div id="contentBox">
+        <div class="content" v-for="(item,index) in imgSrc">
+            <a v-bind:href="imgHref[index]">
+                <img v-bind:src="item" alt="" style="position: relative;left: 10%;width: 80%;">
+            </a>
+            <h2 align="center">{{ nameSrc[index] }}</h2>
+            <br />
+        </div>
+    </div>
+    <script>
+        var content = new Vue({
+            el: "#contentBox",
+            data: {
+                url: "http://www.qq.com",
+                imgSrc: ["/static/images/content/alpine-skiing.svg", "/static/images/content/biathlon.svg", "/static/images/content/bobsleigh.svg", "/static/images/content/curling.svg",
+                    "/static/images/content/figure-skating.svg", "/static/images/content/freestyle-skiing.svg", "/static/images/content/ice-hockey.svg", "/static/images/content/luge.svg", "/static/images/content/nordic-combined.svg",
+                    "/static/images/content/short-track.svg", "/static/images/content/skeleton.svg", "/static/images/content/jumping.svg", "/static/images/content/snowboard.svg", "/static/images/content/speed-skating.svg"
+                ],
+                nameSrc: ["高山滑雪", "冬季两项", "雪车", "冰壶", "花样滑冰", "自由式滑雪", "冰球", "雪橇", "北欧两项", "短道速滑", "钢架雪车", "跳台滑雪", "单板滑雪", "速度滑冰"],
+                imgHref: ["https://olympics.com/zh/beijing-2022/sports/alpine-skiing/", "https://olympics.com/zh/beijing-2022/sports/biathlon/", "https://olympics.com/zh/beijing-2022/sports/bobsleigh/", "https://olympics.com/zh/beijing-2022/sports/curling/", "https://olympics.com/zh/beijing-2022/sports/figure-skating/",
+                    "https://olympics.com/zh/beijing-2022/sports/freestyle-skiing/", "https://olympics.com/zh/beijing-2022/sports/ice-hockey/", "https://olympics.com/zh/beijing-2022/sports/luge/", "https://olympics.com/zh/beijing-2022/sports/nordic-combined/", "https://olympics.com/zh/beijing-2022/sports/short-track-speed-skating/",
+                    "https://olympics.com/zh/beijing-2022/sports/skeleton/", "https://olympics.com/zh/beijing-2022/sports/ski-jumping/", "https://olympics.com/zh/beijing-2022/sports/snowboard/", "https://olympics.com/zh/beijing-2022/sports/speed-skating/"
+                ]
+            },
+        })
+    </script>
+    <div id="mp4Box">
+        <video controls width="100%">
+            <source src="/static/video/PromoteVideo.mp4">
+        </video>
+    </div>
+    <h2 align="center">《你好，双奥之城》</h2>
+
+
     <script src="/static/js/animate.js"></script>
     <script src="/static/js/index.js"></script>
+    <!-- vue框架<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    axios框架<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 </body>
 
 </html>

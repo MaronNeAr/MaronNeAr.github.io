@@ -1,19 +1,5 @@
-#topBlock {
-    width: 1519px;
-    height: 200px;
-    background-image: url(/static/images/BG1.jpeg/);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 1519px;
-}
-
-#options {
-    width: 1519px;
-    height: 50px;
-}
-
 .topBox {
-    width: 200px;
+    width: 13%;
     line-height: 50px;
     display: inline-block;
     text-align: center;
@@ -31,19 +17,35 @@
     font-family: '华文中宋';
 }
 
+.white a {
+    color: white;
+    text-decoration: none;
+}
+
 .rightBox {
     position: absolute;
-    width: 275px;
-    line-height: 160px;
+    width: 18%;
+    line-height: 180px;
     display: inline-block;
-    background-color: pink;
 }
 
 .rightBlock {
-    width: 800px;
-    line-height: 170px;
+    width: 52%;
+    line-height: 100%;
     display: inline-block;
     background-color: red;
+}
+
+.rightHref {
+    width: 100%;
+    height: 180px;
+}
+
+.rightStrong {
+    position: absolute;
+    top: 160px;
+    left: 0%;
+    line-height: 20px;
 }
 
 .arrow-l,
@@ -52,11 +54,31 @@
 }
 
 .current {
-    src: "/static/images/circle1.png";
+    src: "/static/images/circle/circle1.png";
 }
 
 .uncurrent {
-    src: "/static/images/circle0.png";
+    src: "/static/images/circle/circle0.png";
+}
+
+.content {
+    width: 14%;
+    display: inline-block;
+    line-height: 30px;
+}
+
+#topBlock {
+    width: 100%;
+    height: 200px;
+    background-image: url(/static/images/background/BG1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+#options {
+    width: 1536px;
+    height: 50px;
 }
 
 #mainBlock {
@@ -64,27 +86,14 @@
     top: 260px;
     left: 50px;
     display: inline-block;
-    width: 560px;
+    width: 36.5%;
     line-height: 350px;
-    background-color: pink;
-}
-
-#mainBlock ul li {
-    float: left;
-    list-style: none;
-}
-
-#mainBlock ul {
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
 }
 
 #circle {
     position: absolute;
     top: 200px;
-    left: 460px;
+    left: 82.1%;
 }
 
 #circle li {
@@ -95,26 +104,31 @@
 }
 
 #score {
-    width: 500px;
+    width: 28%;
     line-height: 50px;
     display: inline-block;
     text-align: center;
 }
 
 #searchDiv {
+    width: 100%;
     height: 30px;
     background-color: skyblue;
 }
 
 #searchInput {
-    width: 560px;
+    width: 35%;
     height: 26px;
     align-items: center;
 }
 
 #logOn {
-    width: 180px;
+    width: 18%;
     line-height: 50px;
     display: inline-block;
     text-align: center;
+}
+
+#contentBox {
+    margin: 6%;
 }
