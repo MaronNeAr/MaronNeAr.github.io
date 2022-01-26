@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎访问捏</title>
+    <script type="text/javascript" src="/static/js/echarts.js"></script>
+    <script type="text/javascript" src="/static/js/china.js"></script>
     <link rel="stylesheet" href="/static/css/index.css">
     <style>
         * {
@@ -17,7 +19,7 @@
     </script>
 </head>
 
-<body style="background-image: url(/static/images/background/BG2.jpeg);background-size: 100%;background-repeat: repeat-y;">
+<body style="background-image: url(/static/images/background/BG2.jpeg);background-size: 100%;background-repeat: repeat-y;width: 100%;height: 100%;">
     <div id="topBlock" style="background-image: url(/static/images/background/BG1.jpeg);width: 100%;">
         <div id="options" style="width: 100%;">
             <span class="topBox white"><a href="\index">首页</a></span>
@@ -31,8 +33,8 @@
     </div>
     <div id="searchDiv" style="width: 100%;">
         <span class="detils" style="width: 14%;height: 40px;"><button id="btntime">点击获取系统时间</button></span>
-        <span class="detils" style="width: 40%;">
-            <div id="timeDisplay" style="line-height: 40px;"><strong>它可能是一个时间</strong></div>
+        <span class="detils" style="width: 46%;">
+            <div id="timeDisplay" style="width: 100%; line-height: 40px;"><strong>它可能是一个时间</strong></div>
         </span>
         <script>
             var btntime = document.getElementById('btntime');
@@ -145,6 +147,11 @@
             },
         })
     </script>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
+    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp各地运动场馆信息</h1>
+    <span id="main" align="center"></span>
+    <script src="/static/js/china_map.js"></script>
+    <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
     <div id="mp4Box">
         <video controls width="100%">
             <source src="/static/video/PromoteVideo.mp4">
@@ -154,8 +161,6 @@
     <video controls preload="auto" autoplay="true" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" style="width: 640px; height: 375px;" src="blob:http://news.cnr.cn/a3a86339-81de-412d-979a-75c02a64a0cc"></video> -->
     <!-- <iframe src="//player.bilibili.com/player.html?aid=976029658&amp;cid=423323543&amp;page=1" style="min-height:950px;width:100%" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
     <h2 align="center">《你好，双奥之城》</h2>
-
-
     <script src="/static/js/animate.js"></script>
     <script src="/static/js/index.js"></script>
     <!-- vue框架<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
