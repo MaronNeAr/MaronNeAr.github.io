@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎访问捏</title>
-    <script type="text/javascript" src="/static/js/echarts.js"></script>
-    <script type="text/javascript" src="/static/js/china.js"></script>
+    <script type="text/javascript" src="/static/js/echarts/echarts.js"></script>
+    <script type="text/javascript" src="/static/js/echarts/china.js"></script>
     <link rel="stylesheet" href="/static/css/index.css">
     <style>
         * {
@@ -27,7 +27,7 @@
             <span class="topBox white"><a href="https://olympics.com/zh/olympic-channel">奥林匹克频道</a></span>
             <span class="topBox white"><a href="https://2022.cctv.com/?spm=C73465.PhvcG4VlqNFF.EyAwthc54FQC.6">直播赛事</a></span>
             <span id="score" class="white">查看当前积分榜</span>
-            <span id="logOn" class="white"><a href="\register" style="color: white;text-decoration: none;">登录/注册</a></span>
+            <span id="logOn" class="white"><a href="register.html" style="color: white;text-decoration: none;">登录/注册</a></span>
         </div>
         <img src="\static\images\bjOlmpics.png" alt="图片加载失败" width="100%">
     </div>
@@ -148,15 +148,13 @@
         })
     </script>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
-    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp各地运动场馆信息</h1>
-    <span id="main" align="center"></span>
-    <script src="/static/js/china_map.js"></script>
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
     <div id="mp4Box">
         <video controls width="100%">
             <source src="/static/video/PromoteVideo.mp4">
         </video>
     </div>
+    <!-- <video controls id="html5player_html5_api" class="vjs-tech" autoplay="" preload="auto" tabindex="-1" role="application" src="blob:https://pan.baidu.com/74027bbe-6e4a-4669-af31-a04a33fd5b8f" poster="https://thumbnail0.baidupcs.com/thumbnail/875e080e6m2a36ef47db111dd68999c8?fid=903862142-250528-334210744795801&amp;rt=pr&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-zYvkazNHac40k9FSNqzfMrWiJHY%3d&amp;expires=8h&amp;chkbd=0&amp;chkv=0&amp;dp-logid=8662061753765926918&amp;dp-callid=0&amp;time=1643169600&amp;size=c850_u580&amp;quality=100&amp;vuk=903862142&amp;ft=video"><source src="https://pan.baidu.com/api/streaming?path=%2FPromoteVideo.mp4&amp;app_id=250528&amp;clienttype=0&amp;type=M3U8_FLV_264_480&amp;vip=0&amp;jsToken=757FE45554ACC42D2D7A8E1C015BAC3528DBFBB3CC1D4A92AD928C7ED0B58128CA2EDB6094F65748900A6D86CB2839F9&amp;isplayer=1&amp;check_blue=1&amp;adToken=" type="application/x-mpegURL"></video> -->
     <!-- <video preload="auto" src="https://player.bilibili.com/808a24dd-3174-4a68-b2ef-2ad65005553a" controls></video>
     <video controls preload="auto" autoplay="true" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" style="width: 640px; height: 375px;" src="blob:http://news.cnr.cn/a3a86339-81de-412d-979a-75c02a64a0cc"></video> -->
     <!-- <iframe src="//player.bilibili.com/player.html?aid=976029658&amp;cid=423323543&amp;page=1" style="min-height:950px;width:100%" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
@@ -166,5 +164,4 @@
     <!-- vue框架<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     axios框架<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 </body>
-
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="/static/js/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="/static/js/echarts/china.js"></script>
+    <link rel="stylesheet" href="/static/css/echarts.css">
+</head>
+<body>
+    <header>
+        <h1>冰雪悦动echarts板块</h1>
+        <div class="showtime"></div>
+        <script>
+            var showtime=document.querySelector(".showtime");
+            showtime.innerHTML=getDate();
+            function getDate() {
+                var data = new Date();
+                var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+                var day = data.getDay();
+                return '<strong>今天是:' + data.getFullYear() + '年' + (data.getMonth()+1)+ '月' + data.getDate() + '日 ' + arr[day] + '</strog>';
+            }
+        </script>
+    </header>
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel">
+                <h2>柱状图</h2>
+                <div class="chart bar"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel">
+                <h2>词云</h2>
+                <div class="chart charCloud"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel">
+                <h2>线状图</h2>
+                <div class="chart line"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>1895482</li>
+                        <li>2134231</li>
+                    </ul>
+                    <div class="no-hd-footer"></div>
+                </div>
+                <div class="no-wd">
+                    <ul>
+                        <li>data1</li>
+                        <li>data2</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div id="china_map"></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel">
+                <h2>饼图</h2>
+                <div class="chart pie"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel">
+                <h2>配置项查询分布</h2>
+                <div class="chart query"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel">
+                <h2>雷达图</h2>
+                <div class="chart radar"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/echarts/flexible.js"></script>
+    <script src="/static/js/china_map.js"></script>
+    <!-- <script src="/static/js/echarts/jQuery.js"></script> -->
+    <script src="/static/js/echarts/echarts.min.js"></script>
+    <script src="/static/js/echarts/charts.js"></script>
+    <!-- <script src="http://api.map.baidu.com/api?v=2.0&ak="></script> -->
+    <script src="/static/js/echarts/china.js"></script>
+    <script src="/static/js/echarts/echarts.js"></script>
+
+</body>
+</html>
