@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     var mainImg = this.document.getElementById('mainImg');
     var circleImg = this.document.getElementById('circle').querySelectorAll('img');
     var imgHref = this.document.getElementById('imgHref');
-    var Href = ["https://www.beijing2022.cn/", "https://olympics.com/zh/video/beijing-2022-presents-one-year-to-go-show", "https://olympics.com/zh/video/gu-ailing-right-now-i-am-feeling-pretty-unstoppable", "https://olympics.com/zh/news/glossary-of-curling"];
+    var Href = ["https://www.beijing2022.cn/", "https://olympics.com/zh/video/beijing-2022-presents-one-year-to-go-show", "https://olympics.com/zh/video/gu-ailing-right-now-i-am-feeling-pretty-unstoppable", "./echarts.html"];
     arrow_ll.onclick = function() {
         if (index == 0) index = 3;
         else index--;

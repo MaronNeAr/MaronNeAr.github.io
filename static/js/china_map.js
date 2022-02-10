@@ -124,32 +124,32 @@ var option = {
         top: 'bottom',
         text: ['高', '低'], //取值范围的文字
         inRange: {
-            color: ['#e0ff00', '#006e00'] //取值范围的颜色
+            color: ['#02a5b6', '#02a5b6'] //取值范围的颜色
         },
-        show: true //图注
+        show: false //图注
     },
     geo: {
         map: 'china',
-        roam: false, //不开启缩放和平移
-        zoom: 1.23, //视角缩放比例
+        roam: true, //不开启缩放和平移
+        zoom: 1, //视角缩放比例
         label: {
             normal: {
                 show: true,
                 fontSize: '10',
-                color: 'rgba(0,0,0,0.7)'
+                color: 'rgba(255,255,255,1)'
             }
         },
         itemStyle: {
             normal: {
-                borderColor: 'rgba(0, 0, 0, 0.2)'
+                borderColor: 'rgba(0, 0, 0,0.5)'
             },
             emphasis: {
                 areaColor: '#F3B329', //鼠标选择区域颜色
-                shadowOffsetX: 0,
-                shadowOffsetY: 0,
+                shadowOffsetX: 10,
+                shadowOffsetY: 10,
                 shadowBlur: 20,
-                borderWidth: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                borderWidth: 2,
+                shadowColor: 'rgba(0, 0, 0, 0.3)'
             }
         }
     },
@@ -162,9 +162,13 @@ var option = {
 };
 
 // 基于准备好的dom，初始化echarts实例
-var myChart = echarts.init(document.getElementById('main'));
+// var myChart = echarts.init(document.getElementById('main'));
+var myChart = echarts.init(document.getElementById('china_map'));
 // 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
+window.addEventListener("resize", function() {
+    myChart.resize();
+  });
 // 点击事件
 myChart.on('click', function(params) {
     alert(params.name + ':' + params.seriesName + ':' + params.value);
