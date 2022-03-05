@@ -32,6 +32,14 @@ li {
     text-decoration: none;
 }
 
+.mainLogo {
+    width: 30%;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .rightBox {
     position: absolute;
     width: 18%;
@@ -49,6 +57,11 @@ li {
 .rightHref {
     width: 100%;
     height: 180px;
+}
+
+.rightimg {
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .rightStrong {
@@ -77,13 +90,211 @@ li {
     line-height: 30px;
 }
 
+@media only screen and (max-width: 1200px) {
+    .limit-x {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.limit-x {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.huabei-content-2 {
+    height: 630px;
+}
+
+.huabei-content-2 .part2-ul {
+    position: absolute;
+    top: 340px;
+}
+
+.huabei-index-title2 {
+    width: 482px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    color: #000;
+    font-size: 40px;
+    background: url(/static/images/indeximg/index.jpeg);
+    background-size: cover;
+    position: absolute;
+    left: calc(50% - 241px);
+    top: 80px;
+    border-radius: 200px;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.part2-ul {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.part2-ul>li {
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 240px;
+    list-style: none;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.part2-ul>li .font-24 .font-en {
+    font-family: Geogtq;
+}
+
+.part2-ul>li>.mouseout {
+    position: absolute center center;
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.part2-ul>li>.mouseout>div {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.part2-ul>li:nth-child(1)>.mouseout {
+    background: url(/static/images/indeximg/index1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.part2-ul>li:nth-child(2)>.mouseout {
+    background: url(/static/images/indeximg/index2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.part2-ul>li:nth-child(3)>.mouseout {
+    background: url(/static/images/indeximg/index6.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.part2-ul>li:hover>.mouseout {
+    opacity: 0;
+    transition: opacity .04s;
+}
+
+.part2-ul>li>.mouseover {
+    position: absolute;
+    display: table;
+    left: 50%;
+    margin-left: -132px;
+    width: 265px;
+    height: 100%;
+}
+
+.part2-ul>li>.mouseover>div {
+    display: table-cell;
+    vertical-align: middle;
+    transform: scale(.85);
+    opacity: 0;
+}
+
+.part2-ul>li>.mouseover div>.font-en {
+    font-size: 15px;
+}
+
+.part2-ul>li>.mouseover .font-24>.font-en {
+    font-size: 24px;
+}
+
+.part2-ul>li>.mouseover>div>div:nth-child(1) {
+    margin-left: -17px;
+    width: 300px;
+}
+
+.part2-ul>li>.mouseover>div>div:nth-child(2) {
+    width: 265px;
+    font-family: Arial;
+    color: rgba(255, 255, 255, .7);
+    text-align: left;
+    word-break: break-all;
+}
+
+.part2-ul>li:hover>.mouseover>div {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .4s, opacity .04s ease-out;
+}
+
+.part2-ul>li.bglight:hover {
+    background-color: #313749;
+}
+
+.part2-ul>li.bgdark:hover {
+    background-color: #1c2234;
+}
+
+.download-div>.detail>.light>.font-cn {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+
+/* .font-on {
+    color: white;
+} */
+
+.font-24 {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+}
+
+.part2-ul>li .font-24 .font-en {
+    font-family: Geogtq;
+}
+
+.part2-ul>li>.mouseover .font-24>.font-en {
+    font-size: 24px;
+}
+
+.index-footer {
+    position: relative;
+    text-align: center;
+    color: rgb(124, 117, 117);
+}
+
 #topBlock {
     width: 100%;
     height: 200px;
     padding: 0px;
     margin: 0;
     border: 0px;
-    background-image: url(/static/images/background/BG1.jpeg);
+    /* background-image: url(/static/images/background/BG1.jpeg); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -105,6 +316,12 @@ li {
 
 #btntime {
     vertical-align: middle;
+}
+
+#btnSearch {
+    border-radius: 5px;
+    border: 2px;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 #circle {
@@ -131,13 +348,15 @@ li {
 #searchDiv {
     width: 100%;
     height: 45px;
-    background-color: skyblue;
+    /* border-bottom: 1px solid skyblue; */
 }
 
 #searchInput {
     width: 35%;
     height: 26px;
     vertical-align: middle;
+    border-radius: 10px;
+    border: 0px;
 }
 
 #logOn {
