@@ -19,22 +19,22 @@
     </script>
 </head>
 
-<body style="background-image: url(/static/images/background/BG2.jpeg);background-size: 100%;background-repeat: repeat-y;width: 100%;height: 100%;">
-    <div id="topBlock" style="background-image: url(/static/images/background/BG1.jpeg);width: 100%;">
+<body style="background-image: url(/static/images/background/BG6.jpeg);background-size: 100%;background-repeat: repeat-y;width: 100%;height: 100%;">
+    <div id="topBlock">
         <div id="options" style="width: 100%;">
-            <span class="topBox white"><a href="\index">首页</a></span>
-            <span class="topBox white"><a href="https://www.beijing2022.cn/" >北京2022</a></span>
-            <span class="topBox white"><a href="https://olympics.com/zh/olympic-channel">奥林匹克频道</a></span>
-            <span class="topBox white"><a href="https://2022.cctv.com/?spm=C73465.PhvcG4VlqNFF.EyAwthc54FQC.6">直播赛事</a></span>
-            <span id="score" class="white">查看当前积分榜</span>
+            <span class="topBox white"><a href="./index.html">首页</a></span>
+            <span class="topBox white"><a href="./echarts.html" >滑雪记录</a></span>
+            <span class="topBox white"><a href="https://olympics.com/zh/olympic-channel">雪圈动态</a></span>
+            <span class="topBox white"><a href="https://2022.cctv.com/?spm=C73465.PhvcG4VlqNFF.EyAwthc54FQC.6">在线教学</a></span>
+            <span id="score" class="white"><a href="https://2022.cctv.com/?spm=C73465.PhvcG4VlqNFF.EyAwthc54FQC.6">滑雪赛事</a></span>
             <span id="logOn" class="white"><a href="./register.html" style="color: white;text-decoration: none;">登录/注册</a></span>
         </div>
-        <img src="\static\images\bjOlmpics.png" alt="图片加载失败" width="100%">
+        <img src="/static/images/logo.png" class="mainLogo" alt="图片加载失败" width="100%">
     </div>
     <div id="searchDiv" style="width: 100%;">
-        <span class="detils" style="width: 14%;height: 40px;"><button id="btntime">点击获取系统时间</button></span>
+        <!-- <span class="detils" style="width: 14%;height: 40px;"><button id="btntime">点击获取系统时间</button></span> -->
         <span class="detils" style="width: 46%;">
-            <div id="timeDisplay" style="width: 100%; line-height: 40px;"><strong>它可能是一个时间</strong></div>
+            <div id="timeDisplay" style="width: 100%; line-height: 40px;"><strong id="btntime">它可能是一个时间</strong></div>
         </span>
         <script>
             var btntime = document.getElementById('btntime');
@@ -56,7 +56,8 @@
         <span class="search" style="line-height: 40px;">
             <input id="searchInput" name="searchInput" type="text" @keyup.enter="searchTo">
             <a id="logA" href="https://olympics.com/zh/search/?q=">
-                <button type="" id="btnSearch">Search</button>
+                <!-- <button type="" id="btnSearch">Search</button> -->
+                <img src="/static/images/others/search.svg" width="28px" id="btnSearch" style="vertical-align: middle;" alt="">
             </a>
         </span>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -81,7 +82,7 @@
         <div id="mainBlock">
             <span class="arrow-l" style="left: 0%;width: 7.1%;"><img src="/static/images/arrow/arrow-wl.png" width="100%" height="40px" alt=""></span>
             <span class="arrow-r" style="left: 92.8%;width: 7.1%;"><img src="/static/images/arrow/arrow-wr.png" width="100%" height="40px" alt=""></span>
-            <a id="imgHref" href="https://www.beijing2022.cn/" style="width: 100%;"><img id="mainImg" src="/static/images/mainImg/mainImg0.jpeg" width="100%" height="350px" alt=""></a>
+            <a id="imgHref" href="https://www.beijing2022.cn/" style="width: 100%;"><img id="mainImg" src="/static/images/mainImg/mainImg0.jpeg" class="rightimg" width="100%" height="350px" alt=""></a>
             <ol id="circle">
                 <li><img class="current" src="/static/images/circle/circle1.png" alt="" title="冬奥" width="50%" height="10px"></li>
                 <li><img src="/static/images/circle/circle0.png" width="50%" height="10px" alt="" title="北京"></li>
@@ -90,43 +91,145 @@
             </ol>
         </div>
         <div class="rightBox" style="left: 40.8%;top: 260px;">
-            <a class="rightHref" href="https://tv.cctv.com/2022/01/22/VIDEEJjEufC6vtms02wOwmLc220122.shtml?spm=0.PG3ICyQX7bKe.EzTMywnN083k.1">
-                <img src="/static/images/rightbox/fireworker.jpg" alt="" width="100%" height="160px">
+            <a class="rightHref" href="./echarts.html">
+                <img src="/static/images/rightbox/bjhx.png" class="rightimg" alt="" width="100%" height="160px">
             </a>
-            <strong class="rightStrong">[冰雪]将有约200名火炬手参与冬奥...</strong>
+            <strong class="rightStrong">[冰雪]北京出游滑雪场一览</strong>
         </div>
         <div class="rightBox" style="left: 59.6%;top: 260px;">
             <a class="rightHref" href="https://olympics.com/zh/beijing-2022/ceremonies">
-                <img src="/static/images/rightbox/ceremony.jpg" alt="" width="100%" height="160px">
+                <img src="/static/images/rightbox/guailin.jpg" class="rightimg" alt="" width="100%" height="160px">
             </a>
-            <strong class="rightStrong">北京2022冬奥开幕式现场[LIVE]</strong>
+            <strong class="rightStrong">青蛙公主一展冬奥风采</strong>
         </div>
         <div class="rightBox" style="left: 78.4%;top: 260px;">
-            <a class="rightHref" href="https://olympics.com/zh/beijing-2022/venues"><img src="/static/images/rightbox/stadium.jpg" alt="" width="100%" height="160px"></a>
-            <strong class="rightStrong">北京2022冬奥会比赛场馆</strong>
+            <a class="rightHref" href="https://olympics.com/zh/beijing-2022/venues"><img src="/static/images/rightbox/hfhx.jpg" class="rightimg" alt="" width="100%" height="160px"></a>
+            <strong class="rightStrong">95后女孩穿汉服滑雪惊艳外国网友...</strong>
         </div>
         <div class="rightBox" style="left: 40.8%;top: 450px;">
-            <a class="rightHref" href="https://sports.cctv.com/2022/01/20/VIDE8bcyGDYyK8MHN2zpZQBj220120.shtml?spm=0.PG3ICyQX7bKe.EwFYMVqVIDqY.2"><img src="/static/images/rightbox/FromBJ2BJ.png" alt="" width="100%" height="160px"></a>
-            <strong class="rightStrong">[冰雪]《从北京到北京》主题曲MV...</strong>
+            <a class="rightHref" href="https://sports.cctv.com/2022/01/20/VIDE8bcyGDYyK8MHN2zpZQBj220120.shtml?spm=0.PG3ICyQX7bKe.EwFYMVqVIDqY.2"><img src="/static/images/rightbox/ljchx.png" class="rightimg" alt="" width="100%" height="160px"></a>
+            <strong class="rightStrong">《零基础滑雪入门，宝藏级视频教学！</strong>
         </div>
         <div class="rightBox" style="left: 59.6%;top: 450px;">
-            <a class="rightHref" href="https://olympics.com/zh/news/beijing-2022-teams-of-china-tour-short-speed-skating"><img src="/static/images/rightbox/speed-skating.jpg" alt="" width="100%" height="160px"></a>
-            <strong class="rightStrong">中国代表团北京冬奥会巡礼--短道速滑</strong>
+            <a class="rightHref" href="https://olympics.com/zh/news/beijing-2022-teams-of-china-tour-short-speed-skating"><img src="/static/images/rightbox/bxjlp.jpg" alt="" class="rightimg" width="100%" height="160px"></a>
+            <strong class="rightStrong">年度第一滑雪爽片，看完DNA不...</strong>
         </div>
         <div class="rightBox" style="left: 78.4%;top: 450px;">
-            <a class="rightHref" href="https://olympics.com/zh/video/an-international-ice-maker-s-journey-serving-beijing-2022"><img src="/static/images/rightbox/icer.jpg" alt="" width="100%" height="160px"></a>
-            <strong class="rightStrong">资深国际制冰师服务于北京冬奥会</strong>
+            <a class="rightHref" href="./echarts.html"><img src="/static/images/rightbox/hxcy.jpg" alt="" class="rightimg" width="100%" height="160px"></a>
+            <strong class="rightStrong">这些滑雪小知识你知道吗？</strong>
         </div>
     </div>
-    <br />
-    <br />
-    <h1>&nbsp&nbsp&nbsp&nbsp&nbsp2022北京冬季奥林匹克运动会</h1>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div class="limit-x huabei-content-2">
+        <h2 class="huabei-index-title2">冰雪悦动</h2>
+        <ul class="part2-ul clearfix">
+            <li class="bgdark">
+                <div class="mouseover">
+                    <div>
+                        <div class="font-24"><i class="font-cn">滑雪时刻</i></div>
+                        <div><i class="font-cn">基于移动设备GPS数据，完整记录滑雪轨迹。 专业滑雪算法造就专业滑雪数据</i></div>
+                    </div>
+                </div>
+                <div class="mouseout">
+                    <div>
+                        <a href="./echarts.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA+CAYAAAEAM0jvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUNGMDEwMDk5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUNGMDEwMEE5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1Q0YwMTAwNzk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1Q0YwMTAwODk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnszGW4AAAbPSURBVHja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"
+                                alt=""></a>
+                        <div class="font-24"><i class="font-cn">滑雪记录</i></div>
+                    </div>
+                </div>
+            </li>
+            <!-- <li class="bgdark">
+                <div class="mouseover">
+                    <div>
+                        <div class="font-24"><i class="font-cn">影像服务</i></div>
+                        <div><i class="font-cn">庞大专业的摄影师团队，覆盖全国各大雪场，已为雪友留下超过300万张精彩照片</i></div>
+                    </div>
+                </div>
+                <div class="mouseout">
+                    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAAxCAYAAAHy0vQSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkMyN0EyNDY5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkMyN0EyNDc5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QzI3QTI0NDk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QzI3QTI0NTk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgyIAkoAAAW+SURBVHjaYvz//z8DEDQw4AYNDEBFDSCFQPwemwqQPBMSXwCXUXBFjECApPs/VkXoCpAVMiFJ/kU3AcZnJMZ3AAEEUsQGZFThUNDCAPU6B04zoAo6CSlA5n8E4uNYFfxHBS3IPvmPwwJmFiABwo24FAAEEMhYNiAWQ3cLMQCqjw05JSC78yIJBjWwoIkhpwWiARMRNv1GC8l5BA1B0/AfGqjIIBEqJQJ3PjT9KADxTQbyADtAAMHitxYcVaSBv0DczAJNHIxIoUpK9P4HhcUHJLGfQLGJJLjiI7h0QE8bJLjgA3pI/0dzEUGAbgATqQmLidjAwuU1JgIaBZE1YjMEW4rkgdKgrP0OV9mILIAcC9+grp3/nwCAxQKyAR+gcqf/EwdAaeYDI9S030DMCsT/iA1Y5GhkpCQvAAQQLDPtBmIXIP4MdQWtAciXvEC8B4hdQeFXBw1DBmyYlgBav9QxQV2FzbavaOWdAS3cAbIfX+RzofHDaBUiLHjkGEktLylJINSM41/QeN5GV0dAGxJfofkclMf5gNgTmo420tQR0JYIKDv/xJJ+YMAP6ph+StsQX5FyyCVQGw/q65fIdS0BUADVL0ZqwgTVfvxI/E0gnwGxLgWx9xIaegLABP8ZOST+IfkIxP8Czb8gB/wC4uewoKViZvgEdMwXKP8frGTc/X9gAMheBoAAYkQqmqOBWJWBPuAWEC9Dbul/gabuT3RyACgLfwOmCR4WaDX6F1cOoVVJCS3Q/jJBE2IoA/1BJMhumAOwBf1qIAY1j37RyAHgXIirTACVZiHITWZgVAjQs6IqQOPz07um3IPG/05vB7hCKx4GKK0wEA0WDno0WJgYBhgwUbFg6YT2aj4DMTc1ooAUyxcDqRgkoXdAMU5g9P2juQNAtRq0E4QM2KCFGw9NHQC0/BqQ0sQhzQ1qvAJDgZ8mDgB3ZQkXUHygdAF0hCClQwIq6DUZCaWjAFD9J3IdAGsN3wb1v2F9P2iznBTACxowI9UBzWgt4V/QYOcjt9DDFhJMeGrDGrTOJjUqJVBI3CXkgPloteFz6IgHD5XKLCX04eF/QBwEbSHvRGu5noENgtMAbATZDWqUwtqEoDFOHbQhF2YG2oJ/yK1ibgb6gq+gVjFyvyAKiNXoZPltIF4KYgAEKNd6XiGIo/hXwhYOolVycNm7UvaCg8jRkWLjhDm57UUp5bK5KOXnVaS0/AWUkwNuitocSGHJhRKK92k+mLadZaaZ2f2OV++0szO9z3vf73vv815ZDme0JDpGGqfGQTOqg3zQ07BrRdA3eAa+QVhmRq1mFYYMe8A/hUVgfJdoQrSKjoadBpAYxkXJEceCHcNYDObRt5Aw7Xyj3UO4k5Fza+n1tIN3IUH0yks6NMRhj5EAu2NuqqNjXt+VFmQV68EdOWujuiHiFIRr0aYCJMiIAFIuQCR0AsFpr9Twh2dadIsEpyDEeJbsJCtR0Bl2EC6ZahARa6Knokeic0g7AkBUx2zhtm18YFEVyDSoVEEIKp/3MY2dCNgX/wYEMRyl+6DKWZNi+30m2i6AvBTzTvDT+F22+BMq/54YeAvMtx7JXYUDBDEGtMKhKDzbz9D/TUD09rDk3dQWBGxLiV4pc6IZZ0PjmJfBseFGxaI2IHBgjbOdFW326PvoYQyCkSoKCPLhek5NXxmikA2Q25ZnZjnivfXxMgYYSS47zQQFAgojEK/3yiTYKyxnGmNEDNrnuTE7pYKjrQD+NFvlqF8gpNgx2q1BgJTZIpMzqQpsBAdQA90IENA6r0DA5QOvJm1u8Sf26YiOAeWeDfdS4KRG0TvusUTcgrBNzxt5vPquzEWGc6auboZjKVbGtjUGfswoc2sQjRHWEPZ5fjF+bqVxuYKJDxj7NnaWujQQEd5fcToLdme+iFaUqgkajx+wkVKI7H9WwfPzXgtsWEeFmo9yH1c/1HQYKXc4b9VKuX8CAEjxPJ1qx1EAAAAASUVORK5CYII="
+                            alt="">
+                        <div class="font-24"><i class="font-cn">影像服务</i></div>
+                    </div>
+                </div>
+            </li> -->
+            <li class="bglight">
+                <div class="mouseover">
+                    <div>
+                        <div class="font-24"><i class="font-cn">雪圈动态</i></div>
+                        <div><i class="font-cn">图片、视频、长图文等更多精彩内容，丰富的滑雪社区文化，让你的滑雪生活更精彩</i></div>
+                    </div>
+                </div>
+                <div class="mouseout">
+                    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA2CAYAAAHyqfoxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Nzc1RjgxOEY5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Nzc1RjgxOTA5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QzI3QTI0Qzk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzVGODE4RTk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvHk0IkAAAWpSURBVHjaYmAgBvwHAhgNBGa4FOkhcyai64axmYC0NQPZAGgCLxBLIvHXg2iAAMKm8AmIZkFyhC8Q/wJiaQyXIQMmKMbriHQU3diMgouhhwCIBgggXMYqAXEHEKvgVQyNCVYs4lOxasJrLb44R+Lr/kcDGOpBsQvE63AlHiyWvIExGAk5ESh9Eog345LsQnPdY3Q1AAFEjJ9diFGUA8RlSPx92BQJQZ1xEeQ3qNh5bCEHksjH5Xmo+n1ERSZQ+AbFMc+Ex+NVWMRmgCOOEQhw2Ygml4ZhA7ICZDYUOOBKOxuA2BIU1NgSogcQLyEppUPDWoSUbAHT9AWLwl5CeR0d6CDLAwQQVQAozqCG85AU2VDNDkD8+z9+8BOo9DYQfwPiz0RZAtSUiJQTPIBRzsqIH7AD1YGKCi5YTsLnalWs2YxArELBRyBmI6S4A6o4kIEWAGiwKNSCGiLVW5BjyX1igwiozI2UIAUqmwlSC6p5JYlQrAukLmHJZX9ACQOP1uswxSVQxwkRsOgAvhoMh55/6OXDfzKCmo+IxGSKLPgTKihPhcT0HmqWOjZJMaTQCKTA8DsoBToeDVuAlDeS0GUgXgPE94GYB9o0jEIzQwmYEO6jmwUQQNTKa2+AWIuBlgAaRF9xybMQaQioIPUAYiMg5gbiU8BgQW777gdiR3JduOk/YbAOiIWh7CpSDJ+HZlAPctKGlncd2Gwk1oI/UPW/CFXgSK3N20RbguSgLiIdJIzkKBDQJ6ThM1RhDBlBWkqMhmKo4hUkxJs3EG8jNZ3/p1U+AvUtMqBsT1rnVlIaD83kWvKaSLUOZLRmamGMiSQ2gYpJUH8BxkjHo/A1gWIljpCjYC1IDlwKgQWhKLSFiA3EAOUXEfDQT5htS0gIqv/wsCZOzxkY4x8ZlhwgoB7W4yyB1WqEutNyUA2GUP5BIvSsh0cJqMkC5XTg0cCKoyIjPv9Ru1gBGrUUaqQHsqA6VPAdFSxQROocYUhuhkqepEIP4T9seAGbojtQBe/JsCAIyQIxBiJTBbhuJ8JwSVCXGUkPL0aGxhWuQOoeshAQLwPio0AM6oMrAXEwEOsiqdkMzP1+5IQxaMDrCYGyq5OQOQABNmgA0LGrkBy+mGGoAmjJ9Q/JMwn0dgAo+2VDh6De/ScOvALi5aAWHhDzI5mVgKQG5ClZWjocNF52jAjH/gDiR0B8FYhvAvFbIvS8gNU7UHCDFo5/hMViUFHSB8TaZJqrABpqQe4RYAFTqOGBMiwGHwdiDSoHlDYQ78ThkTJKDA5BM+wvEKdQ0eGsQFyANKyADEC1WQClFrAgD8NDQSEN8tl5tECaSbAaJcFwCaT+IniqA1sVOtjLcAG0NsChoVoZIRent2lgPjs9PBGKlif0qWz+biD+AIp1GlTE+6ApyZABrdjbSWXLkMeP3+CaU6EggGBgLWhE0BxJfhcZBoIKBNAssiK0WQzCykBsDMTCSEpBbFArdy8DZET9FhBfA9HAZvMnMvwCmquETaM6oPdjE8gMHV0ihhGwgb9IQ0ak2pmIbBCoy/oWSV6BHEOBIXoZOlQBWivxnAgtoNUK/kA9zEA8g8zUhezWNyCfLUby2AUqpN0JRMTEdCrYcxGl/wIkjNEsCaHQAvRmxwq0vi24GU/lktYYJjEVeVIVVLSRaYEPtF9iiEeNFzQ0bSgodn8huXcquoLjaM1z8UFYcYujtUCO4VK4Fy3KfAeRJ3zR3LaXkIYSNA3XiJkyoXFX+jqam0qI1cyPpTl/AzpORC8PKEK7yMjgPHIfnxTDQPOxZ7EUn6CSSJoGjpeGmo0OzlKlvwKdaQMtmPqOxRLQ0pKNQBxJaO4ezUxhqJ7NOJangOzKoXW0O+DpY1MCdoDMJqt1QUXPaUAbcaA6RA2IVRkgs/PcUCVfoeOtt6ENxnNAvBfYRKHKkA8ARWkwUOJRnx0AAAAASUVORK5CYII="
+                            alt="">
+                        <div class="font-24"><i class="font-cn">雪圈动态</i></div>
+                    </div>
+                </div>
+            </li>
+            <!-- <li class="bgdark">
+                <div class="mouseover">
+                    <div>
+                        <div class="font-24"><i class="font-cn">赛事活动</i></div>
+                        <div><i class="font-cn">全国首创线上滑雪赛事，降低参赛门槛；赛事照片免费下载；更多滑雪活动赛事等着你</i></div>
+                    </div>
+                </div>
+                <div class="mouseout">
+                    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA4CAYAAAE0trCLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkMyN0EyNDI5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkMyN0EyNDM5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1Q0YwMTAwQjk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1Q0YwMTAwQzk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuvYRLEAAAbhSURBVHjaYmCAgv///2sz4ANABf+R2POwKfDBpQGb4kpcElNguoFgBkxwES5jQXxGKOM7IyMjJ5pkGJBiBQggfO7gwCaogmEVkF1AMHCAlCU2SS0kL/2HCXYQFdbo4gABhFUQCl4A8T8ouxkq9wvZWhZspgIDjRGHOBtQXzCQGYTXqWjgGRAvgLI3EJ2mCAKU4CMcUJOhygVAnGNAHIVF0T+iXQdkm2Hx6ycsYn9gegACCN20jwzkAjQbjiCxGYHYHYn/HVs8xwIxJzA+Z6MZCkqCT0DxDzYJLfMQHU3I8kwkekuRFH/DwHRsaQGbzTZAXMaIBID850AsjyvNk5U8WUg1CMV2oBw/1DsexNiMXoz8x6JAAog34zFgG7hEJamYQchNBeJTIIYf1CXq5GZfkOA3LPH7E4uYO0wPQAARYwuoIGRCKoaQwWMglsOjH6RvM5L6h8Ra/ABJUwoONdP+4wbvgVgDiPuh/CxSi4cXDBQArPFDhKYLsHKITEthJagguS5+D2VLA7EDENsCMSsePQZIQe5DblDtRzIEFO8bQHniP2EQyEApgBr0jYHeAGjpOnidiruc/gjEy4DYjVTDj0EN+Epu6gRKuwLxSizBfgZfzbKIgKFzoOp0KEkn4GIf2uJgJKr2QSqIiVWPSz+oauRC8rU/EXqlgbiCDAv7kKKJG1lCCFu8kJoHQXkbiLOB+C0W82SINcQRiHf8Jx0cIuRggADCZ2kyEN+jd559gdQ3cQbiz1h81UDADG+kfgUIMBOyNAVH8IGKyBtYugs6UH1cOPIvCLAQWzT+h9ZKXDgK/0944ncCyVUhKYqBytKAeDYQd4EqeyRxVagxl4m19AbJlTWmGXuhltoQqyEEqiGH3q0MEHhNpoU8UP1/ae9ShN4vUO2xpGo8DstjUGwB7d+pE9B3l2wHQwsGYsB2aMo9jyaOUSCQVL1BwREgfgfE9kDMj0fbY2BtKEdWP4yYUQ9QggFS4UAM6pteBCpbTY1yeBs0qNjpWfgbQS1toXetgzW/QYs/GDgHxOVAzEdNS7H1htvxpOjXQGyCz1ATfMkcKLaEUNMD2vSpgNXFaMAKXfFBQn1PoLgCVH4JCaFjAG2cw8BBmMR8JEF+WhSJQC3ySHbMZSSlXUtJGxjUmwdSf5GHhw4TqXcq1ABrUi0FuhPUyP9MTusA1kbeQVEOAOL7yJ1jIjT2YGsvEdDDhhSnT7EN50ymYoECavWfQDL7L7qChWj5CtRe7QRiURIt0gfiFVjy6VZ8mhYQWX9+IFLdRlJczA4a7QfidyT2ZUA9gW4g5sVlNkCA7q0dNKogiu6aIAmCxP8HJFhIVAiWAVNFLZJGUoosQQtFwQ9iKl0hgkWKNImfQhALDVgEtLIQjGiVsE2EQCQRAuqqEcUUKorG9Ry50eEy+968dd48zIVDNvvezJ07nztzz52tNeb8ZIR+w1gOBfWcLHOnsLMMM9fKGn0PzAKjwGOUW/A0d5rx5yjQA9BNz/Az6h/zUfmw6tXrwKtKbfJTzgndLuEO3tkAnFPMYzXZ7MPYrTFKPgp9ubOKbzviQJN9Bl7IZvk95t1RYEh9d9/nOeaGqvzAP9S1QigAF56wBBzWPhn/T6v3mn0au0lVfieXkUD3GdWW/jSUXFFKdmRg6EozRyu0Vl0ailYrEmckA2Nvqg4/mKayAaVsV4bT92HaCkly/DAU3gtg5DpgUhnKg+fyED18SSm+LHzWlwivyu3kKXALOAvsA9bHbHfX1PpclKGQ66YB+FoJL1dTcUYOBhdVQ3jK2RgTXzIdfYGODZhRzs4mE5JIaMxlKTzqGXwh5UFuKQsM7FUj0bGUjV2mQrPxBGVbhPxtBdb8LwafUKPb7VCm5OiQFmTdcm/fE5Xor6XhnZKwpfPoSVDOpPWeObxP/qsADEpKnVnQdwk9c0nCxHwSJ9MvPajlg2tFltTeIU+dnxe6uigdEhUjD1gPGZI/HLcUmpPYs76GhpnB9ZuUl04TcLHKIWbsTzgoWSEtpzw0oKDqPB3IZ9RJWlRLGx+WFcPQ6FHxlCLE6gM6yu3K2DI5avNuDa/CfPOos2h8ZpLrfMCNQV9+XcUeOGnhj1o99vAjndoPMKrHLdO4d/FhW5WD/G0vDF0YA7sslzgqEn522ArsjqFEmfE6FnXAD+SA2mVPfhvRVp7kupxIcvktQB/gehfuNTAJ8BDxHCjLd3OyfuYlt5SzEOpNAhLqnElMXm8DyGnxeo1rUD5BPwE91nxHPkGPMpW4H+APMPYCWYZZzCQ8Ae4CIzDOaR/Pe5xevK/QIqNBzpZpiC2/veDfkWuwFKX3nzfwUmYEE8PTwBQwa5sVSeUXjFpAh3zS7SEAAAAASUVORK5CYII="
+                            alt="">
+                        <div class="font-24"><i class="font-cn">赛事活动</i></div>
+                    </div>
+                </div>
+            </li> -->
+            <!-- <li class="bglight">
+                <div class="mouseover">
+                    <div>
+                        <div class="font-24"><i class="font-cn">线上商城</i></div>
+                        <div><i class="font-cn">大牌入驻，选择多多；更多优惠，更全品类，总有一款你喜欢的滑雪装备</i></div>
+                    </div>
+                </div>
+                <div class="mouseout">
+                    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA1CAYAAAGIKKNVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkMyN0EyNEE5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkMyN0EyNEI5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QzI3QTI0ODk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QzI3QTI0OTk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvPjBnIAAAXESURBVHjaYvj//z8DECv+xwSPQHIMUAWHoTQGBhH+UA46sAYRLAwMDGwMEMDIgAC/gPgoWBBsDHbAD8Qf8SkAAxYo3Q3EW6FsAST5DQABBDMBmzGMIN0v0RwHA/9BOnFZzsiE5i0UmgnKkIHSgshWwIzFaifMOw5YvMIAEEDIgQFiOOHwFjIoAWJvkF7kcGBkIB68AuLLLFCNXgykATGwPhxJxP8/YcBPrrP/I0cSWYAFKUZ/ADE7kfq4QARAACHnkzv/iQMmMD0sSH44C8SORNh6Gh4+SKHNQCTuBeJ/sBy9EIh/kqAZbhlywv4OxBxEOJsR6s1wUp0MwwEgTdiyFKiMYUUT+4+FHwwyRZiI6AnEIoYSz+JYnCeIxhdD5pOTtjcA8QcgTqAobVMlYyCXU8jxyY9FjwcQ9yMnz8j/xIOLsAADCCD00HX4TztQjV7TwbAkcvxTGSOnNZQkglyDgVL1HwbqA5j5oBr7NwuaoDmSpQ5UsOwdEF+CslWB+DY0yzKCvH0FGgwzkIImnErxil60zYGKX2NCKuM/I7l0JTRZI+NEpEoeGwZFUR6aGHr98R1KM6NH/hcsCeMBmi++AzETkjwT1GfI4CGaGYxoahiQ2zBsYJdA4hsZg5owIlA1LNCa8C+SPIj9BaqXEapWGs2Mf1DfsqDXUSBcB8THaZCVQFgD6lM5bPmYVnkYhDdAzV4AE2NiGCAwYBYjB0f1f9oDuH0AAYQtPqZAGzjUAgvQ7UDvp/ylYdAzYquIrZAsjAbiZ1SwSByIV0DZzUBcix6vv6HBMZfK2ScWPV5hwQsqpX5i6VBSuwpUBuJ7sOA8BKWf0ig+D0LpY8h9vP9IcfCKBpaihCQoIVWh9flAQAGKqeHD/9AKHga6kMvgKGhEs9CoUAhGFsBW8L+lkoXd2Bp0yAMJjPQoeUkp+PWJaND5A7ElsYU+DOTgyNy6SGoycKjJRVKjj0NNFXI8piNpiEZTaIslnjLR1GRjUeOIpiYDSS4RJniVQIL4BsQ3CKi5DFVHsA+E1ftoYA6SmkIcagqQ1MzGoaYQX30Kam4qADErgYJcgYA8MxDLY5NDrk8fQweeLtMgqzyFFoNKyFVbPDQI3tOodYhSAOEaSBx+rcJRS2kKWJCyC2z83Ana+8IHBEiwQwqjLYplfIJWYB8QO6MHLxOs4URlAGqqlMMsBAGAAO1aO0sDQRC+YBIjGtJoYymCIgQUImIliKW1QkBs9CdYiKiIoKg/IZUvECGFjUKCmkJ8FWIpWFgoPhBiCh8xCjpD5mAZJnfnoXirGfiKzS3Dfbm7nd3vG7uPGgWt/Ic+MUsbE8Nu+eVxAmgz9Is3WuavnH6ta4xongwNnweBHI6Vew3Q2G91LDcxJbwerT9U+74LIUCW3XNKMihVxAWifR4naqJJuPeZUmRjwuRxTYg6eliqn8J1z0XNiJqYFwg3mmTxZHzFLh4KSSY8WGpSTKw2sc3m3QMqDdL91bgDBAU1O+vR2hoVyOJR6ZbNSyAJVM+rlQV6ELBkIf1FPFJPn6imloohQEIZP/uFevRqI2PkNNlcFNi4Agtykv04JxZk+xhlfsqGiyMG+jNplmfMxb2EiIca62ZBvhFcqk6Hqx+u5OcWIkqXwzzdFvtw7MSod5inB1AQ2qKC5t4Yv8UUoEf4l44AK7RXRqczTEJbf4n5peIMsAw4ADxQIxEKcQOA5i8enZLkuD6SSxcDxAFRYf4moFft3VF7HPZcrorXgHbKU0d9ZW5ilxo2ME8H5XUTO7w/w+p1qAWMEHmu1aENcgKYBjTYvFZhEh+3ADmWB8ebgGGaZ5UHVbNJwLHwuqNulSYFNuLmiKdj+MmsviT3zfKI18lWwn2NiCao7l5QR8aCHdkmNm7RiGydzfgX/e1/ZeaXyZbJ/hjZd8Gb9mnCJWA3gdfZKqPor9f8gQeJjckZqyf7Qv7CqsYkT41iF0aGX/gEWZyHXCDqd9IAAAAASUVORK5CYII="
+                            alt="">
+                        <div class="font-24"><i class="font-cn">线上商城</i></div>
+                    </div>
+                </div>
+            </li> -->
+            <li class="bgdark">
+                <div class="mouseover">
+                    <div>
+                        <div class="font-24"><i class="font-cn">在线教学</i></div>
+                        <div><i class="font-cn">专业的一对一在线指导，免费的教学视频，让3亿人学滑雪变得更容易</i></div>
+                    </div>
+                </div>
+                <div class="mouseout">
+                    <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA7CAYAAAGyIsIlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Nzc1RjgxOTM5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Nzc1RjgxOTQ5N0E1MTFFOUJEQzg5NjJGQ0Y1RkEyOTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzVGODE5MTk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzVGODE5Mjk3QTUxMUU5QkRDODk2MkZDRjVGQTI5OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlFIJjoAAAa1SURBVHja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"
+                            alt="">
+                        <div class="font-24"><i class="font-cn">在线教学</i></div>
+                    </div>
+                </div>
+            </li>
+            <!-- <script>
+                var indexBox = document.querySelectorAll('.mouseout');
+                for (var i = 0; i < indexBox.length; i++) {
+                    indexBox[i].onclick = function(i) {
+                        var indexHref = ["./echarts.html", ".", "."];
+                        window.location.href = indexHref[i];
+                    }
+                }
+            </script> -->
+        </ul>
+
+    </div>
+    <div>
+        <h6 class="index-footer">上海财经大学冰雪悦动小组 | 联系我们</h6>
+    </div>
+    <!-- <h1>&nbsp&nbsp&nbsp&nbsp&nbsp2022北京冬季奥林匹克运动会</h1>
     <div id="contentBox">
         <div class="content" v-for="(item,index) in imgSrc">
             <a v-bind:href="imgHref[index]" style="width: 100%;">
                 <img v-bind:src="item" alt="" style="position: relative;left: 10%;width: 80%;">
             </a>
-            <h2 align="center">{{nameSrc[index]}}</h2>
+            <h2 align="center"></h2>
             <br />
         </div>
     </div>
@@ -146,22 +249,23 @@
                 ]
             },
         })
-    </script>
+    </script> -->
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
     <!-- 为 ECharts 准备一个定义了宽高的 DOM -->
-    <div id="mp4Box">
+    <!-- <div id="mp4Box">
         <video controls width="100%">
             <source src="/static/video/PromoteVideo.mp4">
         </video>
-    </div>
+    </div> -->
     <!-- <video controls id="html5player_html5_api" class="vjs-tech" autoplay="" preload="auto" tabindex="-1" role="application" src="blob:https://pan.baidu.com/74027bbe-6e4a-4669-af31-a04a33fd5b8f" poster="https://thumbnail0.baidupcs.com/thumbnail/875e080e6m2a36ef47db111dd68999c8?fid=903862142-250528-334210744795801&amp;rt=pr&amp;sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-zYvkazNHac40k9FSNqzfMrWiJHY%3d&amp;expires=8h&amp;chkbd=0&amp;chkv=0&amp;dp-logid=8662061753765926918&amp;dp-callid=0&amp;time=1643169600&amp;size=c850_u580&amp;quality=100&amp;vuk=903862142&amp;ft=video"><source src="https://pan.baidu.com/api/streaming?path=%2FPromoteVideo.mp4&amp;app_id=250528&amp;clienttype=0&amp;type=M3U8_FLV_264_480&amp;vip=0&amp;jsToken=757FE45554ACC42D2D7A8E1C015BAC3528DBFBB3CC1D4A92AD928C7ED0B58128CA2EDB6094F65748900A6D86CB2839F9&amp;isplayer=1&amp;check_blue=1&amp;adToken=" type="application/x-mpegURL"></video> -->
     <!-- <video preload="auto" src="https://player.bilibili.com/808a24dd-3174-4a68-b2ef-2ad65005553a" controls></video>
     <video controls preload="auto" autoplay="true" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" style="width: 640px; height: 375px;" src="blob:http://news.cnr.cn/a3a86339-81de-412d-979a-75c02a64a0cc"></video> -->
     <!-- <iframe src="//player.bilibili.com/player.html?aid=976029658&amp;cid=423323543&amp;page=1" style="min-height:950px;width:100%" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
-    <h2 align="center">《你好，双奥之城》</h2>
+    <!-- <h2 align="center">《你好，双奥之城》</h2> -->
     <script src="/static/js/animate.js"></script>
     <script src="/static/js/index.js"></script>
     <!-- vue框架<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     axios框架<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 </body>
+
 </html>
